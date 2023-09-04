@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+    <title>Grupi</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <link href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+          <nav class="navbar top-navbar navbar-expand-md">
+              <div class="navbar-header" data-logobg="skin6">
+                  <!-- This is for the sidebar toggle which is visible on mobile only -->
+                  <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                          class="ti-menu ti-close"></i></a>
+                  <!-- ============================================================== -->
+                  <!-- Logo -->
+                  <!-- ============================================================== -->
+                  <div class="navbar-brand">
+                      <!-- Logo icon -->
+                      <a href="index.html">
+                          <b class="logo-icon">
+                              <!-- Dark Logo icon -->
+                              <img src="assets/images/logo.png" alt="homepage" class="dark-logo" style="width: 150px;" />
+                              <!-- Light Logo icon -->
+                              <!-- <img src="assets/images/logo.png" alt="homepage" class="light-logo" /> -->
+                          </b>
+                          <!--End Logo icon -->
+                          <!-- Logo text -->
+                          
+                      </a>
+                  </div>
+                  <!-- ============================================================== -->
+                  <!-- End Logo -->
+                  <!-- ============================================================== -->
+                  <!-- ============================================================== -->
+                  <!-- Toggle which is visible on mobile only -->
+                  <!-- ============================================================== -->
+                  <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                      data-toggle="collapse" data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                          class="ti-more"></i></a>
+              </div>
+              <!-- ============================================================== -->
+              <!-- End Logo -->
+              <!-- ============================================================== -->
+              <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                  <!-- ============================================================== -->
+                  <!-- toggle and nav items -->
+                  <!-- ============================================================== -->
+                  <ul class="navbar-nav float-right ml-auto ml-3 pl-1">
+                      <!-- Notification -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                              id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                              <span><i data-feather="bell" class="svg-icon"></i></span>
+                              <span class="badge badge-primary notify-no rounded-circle">5</span>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
+                              <ul class="list-style-none">
+                                  <li>
+                                      <div class="message-center notifications position-relative">
+                                           <!-- Message -->
+                                          <a href="javascript:void(0)"
+                                              class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                              <span class="btn btn-primary rounded-circle btn-circle"><i
+                                                      data-feather="box" class="text-white"></i></span>
+                                              <div class="w-75 d-inline-block v-middle pl-2">
+                                                  <h6 class="message-title mb-0 mt-1">Pavan kumar</h6> <span
+                                                      class="font-12 text-nowrap d-block text-muted">Just
+                                                      see the my admin!</span>
+                                                  <span class="font-12 text-nowrap d-block text-muted">9:02 AM</span>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
+                                          <strong>Check all notifications</strong>
+                                          <i class="fa fa-angle-right"></i>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </li>
+                      <!-- End Notification -->
+                      <!-- ============================================================== -->
+                      <!-- create new -->
+                      <!-- ============================================================== -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i data-feather="settings" class="svg-icon"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <img src="assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                  width="40">
+                              <span class="ml-2 d-none d-lg-inline-block">
+                                   <span
+                                      class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                      class="svg-icon"></i></span>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                              <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                      class="svg-icon mr-2 ml-1"></i>
+                                  My Profile</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                      class="svg-icon mr-2 ml-1"></i>
+                                  Account Setting</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                      class="svg-icon mr-2 ml-1"></i>
+                                  Logout</a>
+                              <div class="dropdown-divider"></div>
+                              <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                      Profile</a></div>
+                          </div>
+                      </li>
+                  </ul>
+                  <!-- ============================================================== -->
+                  <!-- Right side toggle and nav items -->
+                  <!-- ============================================================== -->
+                  <!-- <ul class="navbar-nav float-right">
+                      
+                      <li class="nav-item d-none d-md-block">
+                          <a class="nav-link" href="javascript:void(0)">
+                              <form>
+                                  <div class="customize-input">
+                                      <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                          type="search" placeholder="Search" aria-label="Search">
+                                      <i class="form-control-icon" data-feather="search"></i>
+                                  </div>
+                              </form>
+                          </a>
+                      </li>
+                      
+                      
+                      
+                  </ul> -->
+              </div>
+          </nav>
+      </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+          <!-- Sidebar scroll-->
+          <div class="scroll-sidebar" data-sidebarbg="skin6">
+              <!-- Sidebar navigation-->
+              <nav class="sidebar-nav">
+                  <ul id="sidebarnav">
+                      <li class="sidebar-item "> <a class="sidebar-link sidebar-link" href="index.html"
+                              aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                  class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <!-- <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
+
+                      <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html"
+                              aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
+                                  class="hide-menu">Ticket List
+                              </span></a>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-chat.html"
+                              aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span
+                                  class="hide-menu">Chat</span></a></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
+                              aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
+                                  class="hide-menu">Calendar</span></a></li> -->
+
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap">
+                          <span class="hide-menu">Underwriting</span>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="policy_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item">
+                           <a class="sidebar-link  has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="folder" class="feather-icon"></i><span
+                                  class="hide-menu">Policy Holder </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="employeeBen.html" class="sidebar-link"><span
+                                          class="hide-menu"> Employee Benefit
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="group.html" class="sidebar-link"><span
+                                          class="hide-menu"> Group Benefit
+                                      </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"> 
+                          <a class="sidebar-link" href="assuredlives.html"
+                          aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
+                              class="hide-menu">Assured Lives
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                  class="hide-menu">Reminders </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="premium.html" class="sidebar-link"><span
+                                          class="hide-menu"> Premium
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="birthdays.html" class="sidebar-link"><span
+                                          class="hide-menu"> Birthdays
+                                      </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"><a href="policy_report.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-chart"></i> Reports
+                          </span></a>
+                      </li>
+
+
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap">
+                          <span class="hide-menu">Claims</span>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="claims_dasboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="claims.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="file-text" class="feather-icon"></i> Claim List
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="claims_paid.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-paypal"></i>  Paid Claims
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="claims_report.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-chart"></i> Reports
+                          </span></a>
+                      </li>
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Financials</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="fin_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="fin_policyholder.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="folder" class="feather-icon"></i> Policy Holder
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="fin_transactions.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Transaction
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="auditing.html" class="sidebar-link active"><span
+                          class="hide-menu"><i class="icon-docs"></i> Claim Auditing
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="fin_settlement.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Settlements
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="fin_report.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-chart"></i> Reports
+                          </span></a>
+                      </li>
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Actuarial & Analytics</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="aa_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="managePlan.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i>  Manage Plan
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="pricing.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-tag"></i>  Pricing
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="Reserving.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-basket-loaded"></i>  Reserving (UPR)
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="analytics.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-graph"></i>  Analytics
+                          </span></a>
+                      </li>
+
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">HR & Payroll</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="hr_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="manageStaff.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-people"></i>  Manage Staff
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="staffLeave.html"
+                          aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Leave Applications
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="payroll.html"
+                          aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Payroll
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="hr_Authorization.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="feather" class="feather-icon"></i> Authorization
+                          </span></a>
+                      </li>
+
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Agents</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="agent_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="agent_details.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-doc"></i> My Details
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item">
+                          <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                  class="hide-menu">My Clients </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                                          class="hide-menu"> Policyholder
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="agent_prospect.html" class="sidebar-link"><span
+                                          class="hide-menu"> Prospects
+                                      </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="folder" class="feather-icon"></i>  My Policy Holders
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="quotation.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i> My Quotes
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="agent_report.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-chart"></i> Reports
+                          </span></a>
+                      </li>
+
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Marketing</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="mart_dashboard.html"
+                          aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                              class="hide-menu">Dashboard</span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="manage_agents.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-people"></i>  Manage Agents
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="prospect.html" class="sidebar-link"><span
+                          class="hide-menu"><i data-feather="box" class="feather-icon"></i> Prospects
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="campaigns.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-cursor"></i>  Campaigns
+                          </span></a>
+                      </li>
+                      <li class="sidebar-item"><a href="market_report.html" class="sidebar-link"><span
+                          class="hide-menu"><i class="icon-chart"></i> Reports
+                          </span></a>
+                      </li>
+
+                      <li class="sidebar-item">
+                          <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                  class="hide-menu">Tables </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
+                                          class="hide-menu"> Basic Table
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                                          class="hide-menu"> Dark Basic Table
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Sizing Table
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Coloured
+                                          Table Layout
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="table-datatable-basic.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Basic
+                                          Datatables
+                                          Layout
+                                      </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                  class="hide-menu">Charts </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                                          class="hide-menu"> Morris Chart
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                          class="hide-menu"> ChartJs
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Knob Chart
+                                      </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
+                                  class="hide-menu">UI Elements </span></a>
+                          <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                              <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
+                                          class="hide-menu"> Buttons
+                                      </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
+                                          class="hide-menu"> Modals </span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
+                                          class="hide-menu"> Tabs </span></a></li>
+                              <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
+                                          class="hide-menu"> Tooltip &
+                                          Popover</span></a></li>
+                              <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
+                                          class="hide-menu">Notification</span></a></li>
+                              <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
+                                          class="hide-menu">Progressbar</span></a></li>
+                              <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
+                                          class="hide-menu">Typography</span></a></li>
+                              <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
+                                          class="hide-menu">Bootstrap
+                                          UI</span></a></li>
+                              <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
+                                          class="hide-menu">Breadcrumb</span></a></li>
+                              <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
+                                          class="hide-menu">List
+                                          Media</span></a></li>
+                              <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
+                                          class="hide-menu"> Grid </span></a></li>
+                              <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Carousel</span></a></li>
+                              <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
+                                          class="hide-menu">
+                                          Scrollspy</span></a></li>
+                              <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
+                                          class="hide-menu"> Toasts</span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
+                                          class="hide-menu"> Spinner </span></a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
+                              aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
+                                  class="hide-menu">Cards
+                              </span></a>
+                      </li>
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                              aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
+                                  class="hide-menu">Login
+                              </span></a>
+                      </li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
+                              href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
+                                  class="feather-icon"></i><span class="hide-menu">Register
+                              </span></a>
+                      </li>
+
+                      <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                  class="hide-menu">Icons
+                              </span></a>
+                          <ul aria-expanded="false" class="collapse first-level base-level-line">
+                              <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
+                                          class="hide-menu"> Fontawesome Icons </span></a></li>
+
+                              <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
+                                          class="hide-menu"> Simple Line Icons </span></a></li>
+                          </ul>
+                      </li>
+
+                      <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                              aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                  class="hide-menu">Multi
+                                  level
+                                  dd</span></a>
+                          <ul aria-expanded="false" class="collapse first-level base-level-line">
+                              <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                          class="hide-menu"> item 1.1</span></a>
+                              </li>
+                              <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                          class="hide-menu"> item 1.2</span></a>
+                              </li>
+                              <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
+                                      aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
+                                  <ul aria-expanded="false" class="collapse second-level base-level-line">
+                                      <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                  class="hide-menu"> item
+                                                  1.3.1</span></a></li>
+                                      <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                  class="hide-menu"> item
+                                                  1.3.2</span></a></li>
+                                      <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                  class="hide-menu"> item
+                                                  1.3.3</span></a></li>
+                                      <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                  class="hide-menu"> item
+                                                  1.3.4</span></a></li>
+                                  </ul>
+                              </li>
+                              <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                          class="hide-menu"> item
+                                          1.4</span></a></li>
+                          </ul>
+                      </li>
+                      <li class="list-divider"></li>
+                      <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs/docs.html"
+                              aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
+                                  class="hide-menu">Documentation</span></a></li>
+                      <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                              aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                  class="hide-menu">Logout</span></a></li>
+                  </ul>
+              </nav>
+              <!-- End Sidebar navigation -->
+          </div>
+          <!-- End Sidebar scroll-->
+      </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="card shadow">
+                    <div class="content">
+                        <div
+                          class="alert alert-dismissible show fade d-flex justify-content-between my-auto"
+                          style="background-color: rgb(250, 212, 0); color: #000;"
+                          role="alert"
+                          style="padding: 7px;"
+                        >
+                          <p class="my-auto">
+                            <i class="fas fa-envelope"></i> Last Updated by:
+                            <strong>System Admin</strong> on <strong>11 months ago</strong>
+                          </p>
+                        </div>
+                        <div class="invoice_wrapper">
+                          <div class="container">
+                            <div class="invoice_head d-flex justify-content-between">
+                              <img
+                                src="assets/images/v11/logo.png"
+                                class="img"
+                                alt="Vanguard Logo"
+                              />
+                              <div class="d-flex justify-content-around">
+                                <img
+                                  src="storage/images/clients/image_picker87492577.jpeg"
+                                  class="img_"
+                                  width="10%"
+                                  alt="Vanguard Logo"
+                                />
+                                <span class="address">
+                                  <p class="invoice_com">
+                                    Markd Larbi Henaku (Policy #OSA011521001 )
+                                  </p>
+                                  <p class="invoice_addr">
+                                    Email : developer.anane@gmail.com
+                                  </p>
+                                  <p class="invoice_addr">Phone: 233541312238</p>
+                                  <p class="invoice_addr">Association: St. Hubert Seminary</p>
+                                  <p class="invoice_addr">Inception Date: 01-Sep-2021</p>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="invoice_header">
+                              <h4 class="header_text my-auto">
+                                Claim Summary for Markd Larbi Henaku
+                              </h4>
+                            </div>
+                            <div class="flex_claim row">
+                              <div class="col policy_details">
+                                <table>
+                                  <tbody>
+                                    <h4><strong>Claim Details</strong></h4>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Claim Number:
+                                      </td>
+                                      <td class="policy_value">
+                                        CLM-000001
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Claim Status:
+                                      </td>
+                                      <td class="policy_value">
+                                        Verified
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Claimant:
+                                      </td>
+                                      <td class="policy_value">
+                                        Francis Anane
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Deceased:
+                                      </td>
+                                      <td class="policy_value">
+                                        Mother
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Date Received:
+                                      </td>
+                                      <td class="policy_value">
+                                        24th August 2021
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Contact Person:
+                                      </td>
+                                      <td class="policy_value">
+                                        Isaac Anane
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Contact Person Number:
+                                      </td>
+                                      <td class="policy_value">
+                                        0541312238
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="filed_headers">
+                                        Incident Date:
+                                      </td>
+                                      <td class="policy_value">
+                                        23rd September 2021
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="col policy_details">
+                                <table class="table">
+                                  <h4><strong>Claim Documents</strong></h4>
+                                  <thead>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Document Type</th>
+                                  </thead>
+                                  <tbody>
+                                    <a href="#">
+                                      <tr>
+                                        <td>1</td>
+                                        <td>OSA Flow_Claims.pdf</td>
+                                        <td>Medical cause of death</td>
+                                      </tr>
+                                    </a>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="premium">
+                              <table class="table">
+                                <h4><strong>Premium Payment</strong></h4>
+                                <thead class="table-secondary">
+                                  <th class="text-dark">#</th>
+                                  <th class="text-dark">Date</th>
+                                  <th class="text-dark">Amount</th>
+                                  <th class="text-dark">Mode of Payment</th>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <strong></strong>
+                                    </td>
+                                    <td>
+                                      <strong class="text-danger">Aggregate</strong>
+                                    </td>
+                                    <td>
+                                      <strong class="text-danger">120.00</strong>
+                                    </td>
+                                    <td>
+                                      <strong class="text-danger"
+                                        >Aggregate Count (27)</strong
+                                      >
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      1
+                                    </td>
+                                    <td>
+                                      18-Oct-2021
+                                    </td>
+                                    <td>
+                                      60.00
+                                    </td>
+                                    <td>
+                                      MTN
+                                    </td>
+                                  </tr>
+              
+                                  <tr>
+                                    <td>
+                                      2
+                                    </td>
+                                    <td>
+                                      18-Oct-2021
+                                    </td>
+                                    <td>
+                                      60.00
+                                    </td>
+                                    <td>
+                                      MTN
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="review">
+                              <table class="table">
+                                <h4><strong>Claim Processing Log</strong></h4>
+                                <tr>
+                                  <td>
+                                    <div class="wrap" style="margin: 1em;">
+                                      <div class="">
+                                        <div class="action d-flex justify-content-between">
+                                          <h5 class="mx-2">
+                                            <strong>Posted by:</strong> System Admin
+                                          </h5>
+                                          <h5 class="mx-2">
+                                            <strong>Posted on: </strong> 8th September 2021
+                                          </h5>
+                                        </div>
+                                        <div class="row d-flex">
+                                          <div
+                                            class="col col-md-9 col-lg-9 col-sm-12 col-xs-12"
+                                          >
+                                            A comment
+                                          </div>
+                                          <div
+                                            class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="wrap" style="margin: 1em;">
+                                      <div class="">
+                                        <div class="action d-flex justify-content-between">
+                                          <h5 class="mx-2">
+                                            <strong>Posted by:</strong> System Admin
+                                          </h5>
+                                          <h5 class="mx-2">
+                                            <strong>Posted on: </strong> 8th September 2021
+                                          </h5>
+                                        </div>
+                                        <div class="row d-flex">
+                                          <div
+                                            class="col col-md-9 col-lg-9 col-sm-12 col-xs-12"
+                                          >
+                                            Claim processed
+                                          </div>
+                                          <div
+                                            class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+              
+                                <tr>
+                                  <td>
+                                    <div class="wrap" style="margin: 1em;">
+                                      <div class="">
+                                        <div class="action d-flex justify-content-between">
+                                          <h5 class="mx-2">
+                                            <strong>Posted by:</strong> System Admin
+                                          </h5>
+                                          <h5 class="mx-2">
+                                            <strong>Posted on: </strong> 13th September 2021
+                                          </h5>
+                                        </div>
+                                        <div class="row d-flex">
+                                          <div
+                                            class="col col-md-9 col-lg-9 col-sm-12 col-xs-12"
+                                          >
+                                            Claim Confirmed
+                                          </div>
+                                          <div
+                                            class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <h4><strong>Benefit Due</strong></h4>
+                            <div class="accounts">
+                              <div class="vanguard_accounts">
+                                <table class="table accounts_table">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        Total Premium Paid
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td>
+                                        534.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Benefit Due
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td>
+                                        1000.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Less :
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Lapsed premiums
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td class="single_line">
+                                        154.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Net Benefit Due
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td class="single_line">
+                                        846.00
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="processing d-flex justify-content-between">
+                              <p class="authorize">
+                                Processed by: <span> System Admin</span>
+                              </p>
+                              <p class="authorize">Date: <span> 8th September 2021</span></p>
+                            </div>
+                            <div class="processing d-flex justify-content-between">
+                              <p class="authorize">
+                                Approved by: <span class="signature">Operations Manager</span>
+                              </p>
+                              <p class="authorize">Date: <span> 10th September 2021</span></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div
+                          class="alert alert-dismissible show fade d-flex justify-content-between my-auto"
+                          style="background-color: rgb(250, 212, 0); color: #000;"
+                          role="alert"
+                          style="padding: 7px;"
+                        >
+                          <p class="my-auto">
+                            <i class="fas fa-envelope"></i> Last Updated:
+                            <strong>System Admin</strong> on <strong>11 months ago</strong>
+                          </p>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                          <form id="payout_form">
+                            <input
+                              type="hidden"
+                              name="_token"
+                              value="TKym56McZ8x1Hti3A43dmmTwWurY1XaFwZSnbob7"
+                            />
+                            <input type="hidden" name="claim_id" value="1" />
+                            <div class="form-group d-flex justify-content-center"></div>
+                          </form>
+                        </div>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                              <div class="right">
+                                <h5 class="section_head">select Payment Method</h5>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                  <li class="nav-item pay_item" role="presentation">
+                                    <button
+                                      class="nav-link page-tabs active"
+                                      id="home-tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#home"
+                                      type="button"
+                                      role="tab"
+                                      aria-controls="home"
+                                      aria-selected="true"
+                                    >
+                                      <i class="fas fa-coins"></i>
+                                      Mobile Money Transfer
+                                    </button>
+                                  </li>
+                                  <li class="nav-item pay_item" role="presentation">
+                                    <button
+                                      class="nav-link page-tabs"
+                                      id="profile-tab"
+                                      data-bs-toggle="tab"
+                                      data-bs-target="#profile"
+                                      type="button"
+                                      role="tab"
+                                      aria-controls="profile"
+                                      aria-selected="false"
+                                    >
+                                      <i class="fas fa-recycle"></i>
+                                      Bank Transfer
+                                    </button>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                  <div
+                                    class="tab-pane fade show active"
+                                    id="home"
+                                    role="tabpanel"
+                                    aria-labelledby="home-tab"
+                                  >
+                                    <div class="form_wrapper">
+                                      <form action="#">
+                                        <div class="form-group">
+                                          <label class="form-label mb-3" for="momo_acc_name"
+                                            >Name on Account</label
+                                          >
+                                          <input
+                                            type="text"
+                                            id="momo_acc_name"
+                                            value="Isaac Anane"
+                                            class="form-control pay-control"
+                                          />
+                                        </div>
+                                        <div class="form-group mt-5">
+                                          <label class="form-label mb-3" for="momo_acc_number"
+                                            >Account Number</label
+                                          >
+                                          <input
+                                            type="text"
+                                            name="momo_acc_number"
+                                            id="momo_acc_number"
+                                            value="0541312238"
+                                            class="form-control pay-control"
+                                          />
+                                        </div>
+                                        <div class="form-btn form-group">
+                                          <button class="verify_btn">Verify Number</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="tab-pane fade"
+                                    id="profile"
+                                    role="tabpanel"
+                                    aria-labelledby="profile-tab"
+                                  >
+                                    <div class="form_wrapper">
+                                      <form action="#">
+                                        <div class="form-group">
+                                          <label class="form-label mb-3" for="acc_name"
+                                            >Name on Account</label
+                                          >
+                                          <input
+                                            type="text"
+                                            id="acc_name"
+                                            class="form-control pay-control"
+                                          />
+                                        </div>
+                                        <div class="form-group mt-5">
+                                          <label class="form-label mb-3" for="acc_number"
+                                            >Account Number</label
+                                          >
+                                          <input
+                                            type="text"
+                                            id="acc_number"
+                                            class="form-control pay-control"
+                                          />
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                              <div class="left">
+                                <div class="left-inner">
+                                  <h5 class="section_head">Payment Summary</h5>
+                                  <div class="amount d-flex justify-content-between">
+                                    <p class="pay_key">Amount Payable</p>
+                                    <span class="pay_value">GHS 846.00</span>
+                                  </div>
+                                  <div class="amount d-flex justify-content-between">
+                                    <p class="pay_key">Receipient Name</p>
+                                    <span class="pay_value">Isaac Anane</span>
+                                  </div>
+                                  <div class="amount d-flex justify-content-between">
+                                    <p class="pay_key">Receipient ID Type</p>
+                                    <span class="pay_value">voters id</span>
+                                  </div>
+                                  <div class="amount d-flex justify-content-between">
+                                    <p class="pay_key">ID Number</p>
+                                    <span class="pay_value">f13565463</span>
+                                  </div>
+                                  <div class="amount d-flex justify-content-between">
+                                    <p class="pay_key">Payment by</p>
+                                    <span class="pay_value">System Admin</span>
+                                  </div>
+                                  <div class="date">
+                                    <p id="day" style="font-weight: bold;"></p>
+                                    <span class="d-flex justify-content-center">
+                                      <p class="mx-2" id="date"></p>
+                                      |
+                                      <span class="mx-2" id="clock"></span>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="amount">
+                                  <button class="pay_btn">Proceed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="invoice_wrapper account_invoice">
+                          <div class="container">
+                            <div class="invoice_head d-flex justify-content-between">
+                              <img
+                                src="assets/images/v11/logo.png"
+                                class="img"
+                                alt="Vanguard Logo"
+                              />
+                              <span class="address">
+                                <p class="invoice_com">
+                                  Vanguard Life Assurance Company Limited
+                                </p>
+                                <p class="invoice_addr">
+                                  21 Independence Avenue, Pmbct 455, Cantoment, Accra
+                                </p>
+                                <p class="invoice_addr">
+                                  Tel: (233) 0302 235434/5 Fax: (233) 0302 235437
+                                </p>
+                              </span>
+                            </div>
+                            <div class="invoice_header">
+                              <h4 class="header_text my-auto">Processed Maturity Claim</h4>
+                            </div>
+                            <div class="policy_details">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="filed_headers">
+                                      Name of Policy holder:
+                                    </td>
+                                    <td class="policy_value">
+                                      Markd Larbi Henaku
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="filed_headers">
+                                      Type of Policy:
+                                    </td>
+                                    <td class="policy_value">
+                                      Old Students&#039; Association Policy
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="filed_headers">
+                                      Policy Number:
+                                    </td>
+                                    <td class="policy_value">
+                                      OSA011521001
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="filed_headers">
+                                      Association:
+                                    </td>
+                                    <td class="policy_value">
+                                      St. Hubert Seminary
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="accounts">
+                              <div class="vanguard_accounts">
+                                <table class="table accounts_table">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        Total Premium Paid
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td>
+                                        534.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Benefit Due
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td>
+                                        1000.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Less :
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Lapsed premiums
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td class="single_line">
+                                        154.00
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Net Benefit Due
+                                      </td>
+                                      <td>
+                                        GHC
+                                      </td>
+                                      <td class="single_line">
+                                        846.00
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="processing d-flex justify-content-between">
+                              <p class="authorize">
+                                Processed by: <span> System Admin</span>
+                              </p>
+                              <p class="authorize">Date: <span> 08-Sep-2021</span></p>
+                            </div>
+                            <div class="processing d-flex justify-content-between">
+                              <p class="authorize">
+                                Approved by: <span class="signature">Operations Manager</span>
+                              </p>
+                              <p class="authorize">Date: <span> 10-Sep-2021</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+            
+
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                
+                
+            </div>
+            
+            <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. Designed and Developed by <a
+                    href="https://wrappixel.com">WrapPixel</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <!-- themejs -->
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+
+    <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-view">
+                                <div class="profile-img-wrap">
+                                    <div class="profile-img">
+                                        <a href="#"><img class="avatar" src="http://localhost/pihealth/upload/0433dd803bd4ba29add967606b7a3365.png.png.png.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="profile-basic">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="profile-info-left">
+                                                <h3 class="user-name m-t-0 mb-0">Elmina Polyclinic</h3>
+                                                <div class="staff-id">AG0000915</div>
+                                                <div class="staff-id"></div>
+                                                <small class="text-muted">hospital@gsmedicalgh.com</small>
+                                                <small class="text-muted">Elmina Central Region</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <ul class="personal-info">
+											    <li>
+                                                    <span class="title">Patient:</span>
+                                                    <span class="text">Ms. maya eyre </span>
+                                                </li>
+												<li>
+                                                    <span class="title">Gender:</span>
+                                                    <span class="text">Female</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Clinic:</span>
+                                                    <span class="text"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Doctor:</span>
+                                                    <span class="text"> </span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Date:</span>
+                                                    <span class="text">17th Jun 2021 10:16am</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                
+<style>
+.profile-view .profile-img .avatar {
+  font-size: 24px;
+  height: 150px;
+  line-height: 150px;
+  margin: 0;
+  width: 150px;
+}
+</style>

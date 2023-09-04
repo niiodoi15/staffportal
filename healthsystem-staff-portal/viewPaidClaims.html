@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+    <title>Grupi</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <link href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="index.html">
+                            <b class="logo-icon">
+                                <!-- Dark Logo icon -->
+                                <img src="assets/images/logo.png" alt="homepage" class="dark-logo" style="width: 150px;" />
+                                <!-- Light Logo icon -->
+                                <!-- <img src="assets/images/logo.png" alt="homepage" class="light-logo" /> -->
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right ml-auto ml-3 pl-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge badge-primary notify-no rounded-circle">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="message-center notifications position-relative">
+                                             <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <span class="btn btn-primary rounded-circle btn-circle"><i
+                                                        data-feather="box" class="text-white"></i></span>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Pavan kumar</h6> <span
+                                                        class="font-12 text-nowrap d-block text-muted">Just
+                                                        see the my admin!</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
+                                            <strong>Check all notifications</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Notification -->
+                        <!-- ============================================================== -->
+                        <!-- create new -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="settings" class="svg-icon"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block">
+                                     <span
+                                        class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    My Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                        Profile</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <!-- <ul class="navbar-nav float-right">
+                        
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Search" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
+                            </a>
+                        </li>
+                        
+                        
+                        
+                    </ul> -->
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html"
+                                aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
+                                    class="hide-menu">Ticket List
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-chat.html"
+                                aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span
+                                    class="hide-menu">Chat</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
+                                aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
+                                    class="hide-menu">Calendar</span></a></li> -->
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">Underwriting</span>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="policy_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                             <a class="sidebar-link  has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="folder" class="feather-icon"></i><span
+                                    class="hide-menu">Policy Holder </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="employeeBen.html" class="sidebar-link"><span
+                                            class="hide-menu"> Employee Benefit
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="group.html" class="sidebar-link"><span
+                                            class="hide-menu"> Group Benefit
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link" href="assuredlives.html"
+                            aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
+                                class="hide-menu">Assured Lives
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Reminders </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="premium.html" class="sidebar-link"><span
+                                            class="hide-menu"> Premium
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="birthdays.html" class="sidebar-link"><span
+                                            class="hide-menu"> Birthdays
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"><a href="policy_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">Claims</span>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="claims_dasboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="file-text" class="feather-icon"></i> Claim List
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims_paid.html" class="sidebar-link active"><span
+                            class="hide-menu"><i class="icon-paypal"></i>  Paid Claims
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Financials</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="fin_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_policyholder.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="folder" class="feather-icon"></i> Policy Holder
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_transactions.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Transaction
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="auditing.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-docs"></i> Claim Auditing
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_settlement.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Settlements
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Actuarial & Analytics</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="aa_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="managePlan.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i>  Manage Plan
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="pricing.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-tag"></i>  Pricing
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="Reserving.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-basket-loaded"></i>  Reserving (UPR)
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="analytics.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-graph"></i>  Analytics
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">HR & Payroll</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="hr_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="manageStaff.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-people"></i>  Manage Staff
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="staffLeave.html"
+                            aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Leave Applications
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="payroll.html"
+                            aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Payroll
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="hr_Authorization.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="feather" class="feather-icon"></i> Authorization
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Agents</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="agent_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_details.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-doc"></i> My Details
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">My Clients </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                                            class="hide-menu"> Policyholder
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="agent_prospect.html" class="sidebar-link"><span
+                                            class="hide-menu"> Prospects
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="folder" class="feather-icon"></i>  My Policy Holders
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="quotation.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i> My Quotes
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Marketing</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="mart_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="manage_agents.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-people"></i>  Manage Agents
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="prospect.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="box" class="feather-icon"></i> Prospects
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="campaigns.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-cursor"></i>  Campaigns
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="market_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Tables </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Dark Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Sizing Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Coloured
+                                            Table Layout
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-datatable-basic.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Basic
+                                            Datatables
+                                            Layout
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Charts </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                                            class="hide-menu"> Morris Chart
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                            class="hide-menu"> ChartJs
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Knob Chart
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
+                                    class="hide-menu">UI Elements </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
+                                            class="hide-menu"> Buttons
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
+                                            class="hide-menu"> Modals </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tabs </span></a></li>
+                                <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tooltip &
+                                            Popover</span></a></li>
+                                <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
+                                            class="hide-menu">Notification</span></a></li>
+                                <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
+                                            class="hide-menu">Progressbar</span></a></li>
+                                <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
+                                            class="hide-menu">Typography</span></a></li>
+                                <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
+                                            class="hide-menu">Bootstrap
+                                            UI</span></a></li>
+                                <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
+                                            class="hide-menu">Breadcrumb</span></a></li>
+                                <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
+                                            class="hide-menu">List
+                                            Media</span></a></li>
+                                <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
+                                            class="hide-menu"> Grid </span></a></li>
+                                <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Carousel</span></a></li>
+                                <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Scrollspy</span></a></li>
+                                <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
+                                            class="hide-menu"> Toasts</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
+                                            class="hide-menu"> Spinner </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
+                                aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
+                                    class="hide-menu">Cards
+                                </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
+                                    class="hide-menu">Login
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
+                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
+                                    class="feather-icon"></i><span class="hide-menu">Register
+                                </span></a>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                    class="hide-menu">Icons
+                                </span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
+                                            class="hide-menu"> Fontawesome Icons </span></a></li>
+
+                                <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
+                                            class="hide-menu"> Simple Line Icons </span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                    class="hide-menu">Multi
+                                    level
+                                    dd</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.1</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.2</span></a>
+                                </li>
+                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
+                                        aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
+                                    <ul aria-expanded="false" class="collapse second-level base-level-line">
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.1</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.2</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.3</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.4</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item
+                                            1.4</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs/docs.html"
+                                aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
+                                    class="hide-menu">Documentation</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Logout</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="card shadow">
+                    <div class="preview_pdf d-none">
+                        <object data='' type="application/pdf" width=100% height="678">
+    
+                            <iframe src='' width=100% height="678" name="pdf_reader">
+                                <p>This browser does not support PDF!</p>
+                            </iframe>
+    
+                        </object>
+                    </div>
+                    <div class="row main_content">
+                        <div class="col col-md-12">
+                            <div class="alert alert-dismissible show fade d-flex justify-content-between my-auto"
+                                style="background-color: rgb(250, 212, 0); color: #000;" role="alert" style="padding: 7px;">
+                                <p class="my-auto">
+                                    <i class="fas fa-envelope"></i> Last Updated by:
+                                    <strong>Hanson Bansah</strong>
+                                    on <strong>1 month ago</strong>
+                                </p>
+                            </div>
+                            <div class="card p-3">
+    
+                                <nav class="navbar navbar-expand-lg"
+                                    style="z-index: 0; background-color: transparent; padding: 0px;">
+                                    <div class="container-fluid">
+                                        <div class="collapse navbar-collapse justify-content-between" id="navbarText">
+                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                <li class="nav-item">
+                                                    <a href="office/claims">
+                                                        <i class="fas fa-arrow-left text-dark"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="navbar-text d-flex">
+                                                <a class="sms text-center mx-3 sms_toggle" href="cl_history.html">
+                                                    <i class="text-primary fas fa-history"></i>
+                                                    <p>History</p>
+                                                </a>
+                                                <a class="sms text-center mx-3 sms_toggle" data-toggle="modal"
+                                                data-target="#myModal" style="cursor: pointer;">
+                                                    <i class="text-primary fas fa-envelope"></i>
+                                                    <p>Email</p>
+                                                </a>
+                                                <div class="sms text-center mx-3 email_toggle" data-toggle="modal"
+                                                data-target="#emailModal" style="cursor: pointer;">
+                                                    <i class="text-primary fas fa-envelope"></i>
+                                                    <p>SMS</p>
+                                                </div>
+                                                <div class="sms text-center mx-3 docs_toggle" data-toggle="modal"
+                                                data-target="#docsModal" style="cursor: pointer;">
+                                                    <i class="text-primary fas fa-file"></i>
+                                                    <p>Request Docs</p>
+                                                </div>
+                                                <div class="sms text-center mx-3 " style="cursor: pointer;">
+                                                    <a class="btn text-primary btn-sm" id="print_btn"><i
+                                                            class="fas fa-print"></i><br> Summary</a>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </nav>
+    
+                                <!-- SMS modal content -->
+                                <div id="myModal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Send E-mail to PAPA YAW
+                                                <small>(papayawowusu@yahoo.com)</small>
+                                            </h5>
+                                            <button type="button" class="close close_btn" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="email_form">
+                                                <input type="hidden" name="_token"
+                                                    value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs"> <input
+                                                    type="hidden" name="id" value="794">
+                                                <input type="hidden" name="claim_id" value="20">
+                                                <input type="text" name="subject" class="form-control"
+                                                    placeholder="subject">
+                                                <label for="mail">Body</label>
+                                                <textarea name="mail" id="mail" cols="30" rows="10"
+                                                    class="form-control">Type Message here...</textarea>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" id="email_send" class="btn btn-primary">Send</button>
+                                            <button type="button" class="btn btn-secondary close_btn"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                        </form>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                                <!-- email modal content -->
+                                <div id="emailModal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Send a message to PAPA YAW</h5>
+                                            <button type="button" class="close close_btn" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="sms_form">
+                                                <input type="hidden" name="_token"
+                                                    value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs"> <input
+                                                    type="hidden" name="id" value="794">
+                                                <input type="hidden" name="claim_id" value="20">
+                                                <textarea name="message" id="message" cols="30" rows="10"
+                                                    maxlength="280" class="form-control">Type Message here...</textarea>
+    
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" id="sms_send" class="btn btn-primary">Send</button>
+                                            <button type="button" class="btn btn-secondary close_btn"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+    
+                                <!-- docs modal content -->
+                                <div id="docsModal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Request Document</h5>
+                                            <button type="button" class="close close_btn" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="request_form">
+                                                <input type="hidden" name="_token"
+                                                    value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs"> <input
+                                                    type="hidden" name="id" value="794">
+                                                <input type="hidden" name="claim_id" value="20">
+                                                <select name="docs" id="docs" class="form-control">
+                                                    <option value="Medical Cause of death">Medical Cause of death
+                                                    </option>
+                                                    <option value="Critical illness report">Critical illness report
+                                                    </option>
+                                                    <option value="Permanent disability report">Permanent disability
+                                                        report
+                                                    </option>
+                                                    <option value="Picture">Picture <small>(eg. Funeral Poster)</small>
+                                                    </option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+    
+                                                <input class="form-control" type="type" id="otherdocname"
+                                                    name="otherdocname" value="" placeholder="Other Document Details"
+                                                    style="display:none;">
+    
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" id="docs_send" class="btn btn-primary">Send</button>
+                                            <button type="button" class="btn btn-secondary close_btn"
+                                                data-dismiss="modal">Close</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+    
+                                <!-- edit docs/upload modal content -->
+                                <div id="uploadocsModal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Upload Document</h5>
+                                            <button type="button" class="close close_btn" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="office/financials/update" method="POST"
+                                                enctype="multipart/form-data">
+                                                <input type="hidden" name="_token"
+                                                    value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs"> <input
+                                                    type="hidden" name="claim_id" value="20">
+                                                <input type="hidden" name="claim_number" value="CLM-000011">
+                                                <div class="form-group">
+                                                    <label for="documenttype">Document Type</label>
+                                                    <select name="documenttype" id="documenttype" class="form-control">
+                                                        <option value="Medical Cause of death">Medical Cause of death
+                                                        </option>
+                                                        <option value="Critical illness report">Critical illness report
+                                                        </option>
+                                                        <option value="Permanent disability report">Permanent disability
+                                                            report</option>
+                                                        <option value="Picture">Picture <small>(eg. Funeral
+                                                                Poster)</small>
+                                                        </option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group"
+                                                    style="border: 1px #000 dashed; padding: 20px; border-radius: 5px; cursor: pointer;">
+                                                    <label class="docs" for="documentprof">
+                                                        <i class="fas fa-file fa-3x text-center typefile"></i> Upload Document
+                                                    </label>
+                                                    <!-- <input type="file" name="documentprof" id="documentprof"> -->
+                                                </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                            <button type="button" class="btn btn-secondary close_btn"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+    
+                                
+                                <div class="row my-2">
+                                    <div id="editor"></div>
+                                    <div class="col col-md-6" id="content">
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                                aria-labelledby="pills-home-tab">
+                                                <div class="card-header">
+                                                    <h4 class="card-title mb-3">Claim #CLM-000011</h4>
+                                                </div>
+                                                <table class="
+                                                    table " id=" dataTable">
+                                                    <tbody>
+                                                        <a href="#">
+                                                            <tr>
+                                                                <td style="display: block">
+                                                                    <p>Status</p>
+                                                                    <span class="badge badge-pill badge-primary">Open</span>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Claimant</p>
+                                                                    <strong>PAPA YAW OWUSU</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Claim Type</p>
+                                                                    <strong>Death</strong>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Deceased</p>
+                                                                    <strong>Spouse</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Date Received</p>
+                                                                    <strong>19th July 2022</strong>
+                                                                </td>
+                                                                <td>
+                                                                    <p>Contact Person</p>
+                                                                    <strong>Paul Asante Owusu</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p>Incident Date</p>
+                                                                    <strong>5th April 2022</strong>
+                                                                </td>
+    
+                                                            </tr>
+                                                        </a>
+                                                    </tbody>
+                                                </table>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Claim Documents
+                                                            <span class="edit_btn edit-button float-right" style="cursor: pointer;">
+                                                                <a href=""  data-toggle="modal"
+                                                                data-target="#uploadocsModal">
+                                                                    <i class="fas fa-edit text-primary"></i>
+                                                                </a>
+                                                                
+                                                            </span>
+                                                        </h4>
+                                                    </div>
+                                                    <table class="table " id="dataTable">
+                                                        <thead class=" text-primary">
+                                                            <tr>
+                                                                <th scope="">SN</th>
+                                                                <th scope="col">Document Type</th>
+                                                                <th scope="col">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <a href="#">
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Medical cause of death</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="action_btn d-flex justify-content-around">
+                                                                            <!--<i class="fas fa-eye pdf_btn"
+                                                                                        id="pdf_btn"></i>
+                                                                                    <a target="pdf_reader"
+                                                                                        href="storage/document/claims/DC DOC.pdf"><i
+                                                                                            class="fas fa-eye"></i></a>-->
+    
+                                                                            <a target="_blank"
+                                                                                href="storage/document/claims/DC DOC.pdf"><i
+                                                                                    class="fas fa-download"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </a>
+                                                            <a href="#">
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>Others</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="action_btn d-flex justify-content-around">
+                                                                            <!--<i class="fas fa-eye pdf_btn"
+                                                                                        id="pdf_btn"></i>
+                                                                                    <a target="pdf_reader"
+                                                                                        href="storage/document/claims/Scan id.pdf"><i
+                                                                                            class="fas fa-eye"></i></a>-->
+    
+                                                                            <a target="_blank"
+                                                                                href="storage/document/claims/Scan id.pdf"><i
+                                                                                    class="fas fa-download"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </a>
+                                                        </tbody>
+                                                    </table>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-xl-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                
+                                                <ul class="nav nav-pills bg-nav-pills nav-justified">
+                                                    <li class="nav-item">
+                                                        <a href="#home1" data-toggle="tab" aria-expanded="false"
+                                                            class="nav-link rounded-0  active">
+                                                            <i class="mdi mdi-home-variant d-lg-none d-block mr-1"></i>
+                                                            <span class="d-none d-lg-block"> POLICY DETAIL</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#profile1" data-toggle="tab" aria-expanded="true"
+                                                            class="nav-link rounded-0">
+                                                            <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>
+                                                            <span class="d-none d-lg-block">REVIEW CLAIM</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#settings1" data-toggle="tab" aria-expanded="false"
+                                                            class="nav-link rounded-0">
+                                                            <i class="mdi mdi-settings-outline d-lg-none d-block mr-1"></i>
+                                                            <span class="d-none d-lg-block">BENEFITS</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                
+                                                <div class="tab-content" style="border-top: 20px #168491 solid; border-left: 1px solid; border-right: 1px solid; border-bottom: 1px solid;">
+                                                    <div class="tab-pane process_claim active" id="home1">
+                                                        <div class="card-header">
+                                                            <h4 class=""> Policy #OSA026032100508</h4>
+                                                        </div>
+                                                        <div class="
+                                                                card-body">
+                                                            <p class="card-text">
+                                                            <div class="author flex-column">
+                                                                <a>
+                                                                    <img class="avatar mx-auto d-block"
+                                                                        src="assets/images/default-profile.svg"
+                                                                        alt="PAPA YAW OWUSU">
+                                                                </a>
+                                                                <h5 class="title text-center">PAPA YAW
+                                                                    OWUSU</h5>
+                                                                </a>
+        
+                                                            </div>
+                                                            </p>
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            E-mail
+                                                                        </td>
+                                                                        <td>
+                                                                            <strong>papayawowusu@yahoo.com</strong>
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Phone
+                                                                        </td>
+                                                                        <td>
+                                                                            <strong>15714099636</strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Association
+                                                                        </td>
+                                                                        <td>
+                                                                            <strong>GHANASS OLD STUDENTS ASSOCIATION(GOSA
+                                                                                03)</strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="section_head">
+                                                                <h4>Premium History</h4>
+                                                            </div>
+                                                            <table class="table">
+                                                                <thead style="background-color: #e7e7e7">
+                                                                    <tr>
+                                                                        <th scope="col">#</th>
+                                                                        <th scope="col">Date</th>
+                                                                        <th scope="col">Amount (GHS)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            1
+                                                                        </td>
+                                                                        <td>
+                                                                            11th May 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            2
+                                                                        </td>
+                                                                        <td>
+                                                                            6th June 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            3
+                                                                        </td>
+                                                                        <td>
+                                                                            6th June 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            4
+                                                                        </td>
+                                                                        <td>
+                                                                            14th July 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            5
+                                                                        </td>
+                                                                        <td>
+                                                                            14th July 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            6
+                                                                        </td>
+                                                                        <td>
+                                                                            8th August 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            7
+                                                                        </td>
+                                                                        <td>
+                                                                            8th August 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            8
+                                                                        </td>
+                                                                        <td>
+                                                                            8th September 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            9
+                                                                        </td>
+                                                                        <td>
+                                                                            8th September 2022
+                                                                        </td>
+                                                                        <td>
+                                                                            14.00
+                                                                        </td>
+        
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane show" id="profile1">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title">Leave a Comment</h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <small>Please validate claim information. You may
+                                                                request further information from the claimant as well.</small>
+        
+                                                            <form id="comment_form">
+                                                                <input type="hidden" name="_token"
+                                                                    value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs"> <input
+                                                                    type="hidden" name="user_id" value="1">
+                                                                <input type="hidden" name="claim_id" value="20">
+                                                                <textarea style="background-color: #f0f0f0; padding:0 10px;"
+                                                                    name="comment" id="comment" cols="30" rows="20"
+                                                                    class="form-control">My Comment</textarea>
+        
+                                                        </div>
+                                                        <div class="card-footer mx-auto">
+                                                            <button type="submit" id="comment_btn"
+                                                                class="btn btn-primary mx-auto">Save</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="settings1">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h4 class="">Total Benefit Due</h4>
+                                                            </div>
+                                                            <div class="
+                                                                        card-body" id="printContent">
+        
+                                                                <form id="invoice_form">
+                                                                    <fieldset>
+                                                                        <input type="hidden" name="_token"
+                                                                            value="UayNnZmZ7BczZLwbt2cv5dnJhp3Upr7yozDgjBgs">
+                                                                        <table class="table " id="dataTable">
+                                                                            <thead class=" text-primary">
+                                                                                <tr>
+                                                                                    <th scope="col">Item Description</th>
+                                                                                    <th scope="col">Amount (GHS)</th>
+                                                                                    <th scope="col">
+                                                                                        <input type="checkbox" name="checkedAll"
+                                                                                            id="checkedAll"
+                                                                                            class="checkedAll form-check">
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="display: block">
+                                                                                        Total Premium Paid
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        126.00
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input type="checkbox" name="" id=""
+                                                                                            disabled checked>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <!-- <tr>
+                                                                                    <td><strong>Benefit Due</strong></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                </tr> -->
+                                                                                <tr>
+                                                                                    <td>Medication</td>
+                                                                                    <td id="main_life">10000
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input type="checkbox"
+                                                                                            name="main_select" disabled
+                                                                                            id="main_select"
+                                                                                            class="checkSingle form-check" 1>
+                                                                                    </td>
+                                                                                </tr>
+        
+                                                                                <input type="hidden" id="benefit_amount"
+                                                                                    name="main" value=10000>
+                                                                                <tr>
+                                                                                    <td>Consultations</td>
+                                                                                    <td id="ben_amount"> 5000</td>
+                                                                                    <td>
+                                                                                        <input type="checkbox" name="select1"
+                                                                                            id="select2" value="5000"
+                                                                                            class="amount_check checkSingle form-check"
+                                                                                            disabled>
+                                                                                    </td>
+                                                                                </tr>
+        
+                                                                                <input type="hidden" id="benefit_amount"
+                                                                                    name="main" value=10000>
+                                                                                <tr>
+                                                                                    <td>Investigation & Procedures</td>
+                                                                                    <td id="ben_amount"> 5000</td>
+                                                                                    <td>
+                                                                                        <input type="checkbox" name="select3"
+                                                                                            id="select4" value="5000"
+                                                                                            class="amount_check checkSingle form-check"
+                                                                                            disabled>
+                                                                                    </td>
+                                                                                </tr>
+        
+                                                                                <input type="hidden" id="benefit_amount"
+                                                                                    name=spouse value=10000>
+                                                                                <tr>
+                                                                                    <td>Accomodation</td>
+                                                                                    <td id="ben_amount"> 10000</td>
+                                                                                    <td>
+                                                                                        <input type="checkbox" name="select5"
+                                                                                            id="select6" value="10000"
+                                                                                            class="amount_check checkSingle form-check"
+                                                                                            checked disabled>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Surgery (Including Deliveries)</td>
+                                                                                    <td id="ben_amount"> 10000</td>
+                                                                                    <td>
+                                                                                        <input type="checkbox" name="select5"
+                                                                                            id="select6" value="10000"
+                                                                                            class="amount_check checkSingle form-check"
+                                                                                            checked disabled>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td><strong>Less: </strong></td>
+                                                                                    <td></td>
+                                                                                    <td><span class="float-right"><i
+                                                                                                class="fas fa-plus-circle"></i></span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Lapsed Premiums</td>
+                                                                                    <td>
+                                                                                        <input type="text" name="lap_prem"
+                                                                                            id="lap_prem" style="width: 50%"
+                                                                                            class="form-control" value=0>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input type="checkbox"
+                                                                                            name="lapsed_prem" id="lapsed_prem"
+                                                                                            class="form-check">
+                                                                                    </td>
+                                                                                </tr>
+        
+                                                                                <tr style="border: none;">
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td><strong>Net Benefit Due: </strong></td>
+                                                                                    <td class="float-right">
+                                                                                        <input type="text" name="total"
+                                                                                            id="total" class="form-control"
+                                                                                            style="width: 50%" value="40000">
+                                                                                    </td>
+                                                                                    <td class="float-right">
+                                                                                        <strong></strong>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <input type="hidden" name="user_id" value=1>
+                                                                        <input type="hidden" name="claim_id" value=20>
+                                                                        <div class="form-group d-flex justify-content-center">
+                                                                            <button type="submit" id="invoice_btn"
+                                                                                class="btn btn-success"><i
+                                                                                    class="fas fa-save"></i> Processed</button>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <table class="table " id="dataTable">
+                                                                    <tbody>
+        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                
+                                            </div> <!-- end card-body-->
+                                        </div> <!-- end card-->
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                
+                
+            </div>
+            
+            <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. Designed and Developed by <a
+                    href="https://wrappixel.com">WrapPixel</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <!-- themejs -->
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+
+    <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
+</body>
+
+</html>

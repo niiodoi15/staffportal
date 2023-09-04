@@ -1,0 +1,15 @@
+[] add staff signup form
+[] change icons on staff details
+[] add dependants input "name" attribute and staff's input "name attributes"
+[] On dashboard change the cards icons       
+[] add collapse icons on viewMedicalHistory.html       
+
+
+total num of dependants 
+hostpitals attended
+labs and diagnostics facilities attended
+pharmacies attended
+total utilization
+outstanding benefits
+
+      

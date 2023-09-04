@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+    <title>Grupi</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <link href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="index.html">
+                            <b class="logo-icon">
+                                <!-- Dark Logo icon -->
+                                <img src="assets/images/logo.png" alt="homepage" class="dark-logo" style="width: 150px;" />
+                                <!-- Light Logo icon -->
+                                <!-- <img src="assets/images/logo.png" alt="homepage" class="light-logo" /> -->
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right ml-auto ml-3 pl-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge badge-primary notify-no rounded-circle">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="message-center notifications position-relative">
+                                             <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <span class="btn btn-primary rounded-circle btn-circle"><i
+                                                        data-feather="box" class="text-white"></i></span>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Pavan kumar</h6> <span
+                                                        class="font-12 text-nowrap d-block text-muted">Just
+                                                        see the my admin!</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
+                                            <strong>Check all notifications</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Notification -->
+                        <!-- ============================================================== -->
+                        <!-- create new -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="settings" class="svg-icon"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block">
+                                     <span
+                                        class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    My Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                        Profile</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <!-- <ul class="navbar-nav float-right">
+                        
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Search" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
+                            </a>
+                        </li>
+                        
+                        
+                        
+                    </ul> -->
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item "> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html"
+                                aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
+                                    class="hide-menu">Ticket List
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-chat.html"
+                                aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span
+                                    class="hide-menu">Chat</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
+                                aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
+                                    class="hide-menu">Calendar</span></a></li> -->
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">Underwriting</span>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="policy_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                             <a class="sidebar-link  has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="folder" class="feather-icon"></i><span
+                                    class="hide-menu">Policy Holder </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="employeeBen.html" class="sidebar-link"><span
+                                            class="hide-menu"> Employee Benefit
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="group.html" class="sidebar-link"><span
+                                            class="hide-menu"> Group Benefit
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link active" href="assuredlives.html"
+                            aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span
+                                class="hide-menu">Assured Lives
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Reminders </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="premium.html" class="sidebar-link"><span
+                                            class="hide-menu"> Premium
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="birthdays.html" class="sidebar-link"><span
+                                            class="hide-menu"> Birthdays
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"><a href="policy_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">Claims</span>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="claims_dasboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="file-text" class="feather-icon"></i> Claim List
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims_paid.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-paypal"></i>  Paid Claims
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="claims_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Financials</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="fin_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_policyholder.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="folder" class="feather-icon"></i> Policy Holder
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_transactions.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Transaction
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="auditing.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-docs"></i> Claim Auditing
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_settlement.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="credit-card" class="feather-icon"></i> Settlements
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="fin_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Actuarial & Analytics</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="aa_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="managePlan.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i>  Manage Plan
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="pricing.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-tag"></i>  Pricing
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="Reserving.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-basket-loaded"></i>  Reserving (UPR)
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="analytics.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-graph"></i>  Analytics
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">HR & Payroll</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="hr_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="manageStaff.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-people"></i>  Manage Staff
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="staffLeave.html"
+                            aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Leave Applications
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="payroll.html"
+                            aria-expanded="false"><i data-feather="box" class="feather-icon"></i>Payroll
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="hr_Authorization.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="feather" class="feather-icon"></i> Authorization
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Agents</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="agent_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_details.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-doc"></i> My Details
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">My Clients </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                                            class="hide-menu"> Policyholder
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="agent_prospect.html" class="sidebar-link"><span
+                                            class="hide-menu"> Prospects
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_clients.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="folder" class="feather-icon"></i>  My Policy Holders
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="quotation.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="edit-3" class="feather-icon"></i> My Quotes
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="agent_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Marketing</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="mart_dashboard.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="manage_agents.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-people"></i>  Manage Agents
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="prospect.html" class="sidebar-link"><span
+                            class="hide-menu"><i data-feather="box" class="feather-icon"></i> Prospects
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="campaigns.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-cursor"></i>  Campaigns
+                            </span></a>
+                        </li>
+                        <li class="sidebar-item"><a href="market_report.html" class="sidebar-link"><span
+                            class="hide-menu"><i class="icon-chart"></i> Reports
+                            </span></a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Tables </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
+                                            class="hide-menu"> Dark Basic Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Sizing Table
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Coloured
+                                            Table Layout
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="table-datatable-basic.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Basic
+                                            Datatables
+                                            Layout
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Charts </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
+                                            class="hide-menu"> Morris Chart
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
+                                            class="hide-menu"> ChartJs
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Knob Chart
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
+                                    class="hide-menu">UI Elements </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
+                                            class="hide-menu"> Buttons
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
+                                            class="hide-menu"> Modals </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tabs </span></a></li>
+                                <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
+                                            class="hide-menu"> Tooltip &
+                                            Popover</span></a></li>
+                                <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
+                                            class="hide-menu">Notification</span></a></li>
+                                <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
+                                            class="hide-menu">Progressbar</span></a></li>
+                                <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
+                                            class="hide-menu">Typography</span></a></li>
+                                <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
+                                            class="hide-menu">Bootstrap
+                                            UI</span></a></li>
+                                <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
+                                            class="hide-menu">Breadcrumb</span></a></li>
+                                <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
+                                            class="hide-menu">List
+                                            Media</span></a></li>
+                                <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
+                                            class="hide-menu"> Grid </span></a></li>
+                                <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Carousel</span></a></li>
+                                <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
+                                            class="hide-menu">
+                                            Scrollspy</span></a></li>
+                                <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
+                                            class="hide-menu"> Toasts</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
+                                            class="hide-menu"> Spinner </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
+                                aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
+                                    class="hide-menu">Cards
+                                </span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
+                                    class="hide-menu">Login
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
+                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
+                                    class="feather-icon"></i><span class="hide-menu">Register
+                                </span></a>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                    class="hide-menu">Icons
+                                </span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
+                                            class="hide-menu"> Fontawesome Icons </span></a></li>
+
+                                <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
+                                            class="hide-menu"> Simple Line Icons </span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                    class="hide-menu">Multi
+                                    level
+                                    dd</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.1</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item 1.2</span></a>
+                                </li>
+                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
+                                        aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
+                                    <ul aria-expanded="false" class="collapse second-level base-level-line">
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.1</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.2</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.3</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                                    class="hide-menu"> item
+                                                    1.3.4</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> item
+                                            1.4</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs/docs.html"
+                                aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
+                                    class="hide-menu">Documentation</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Logout</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row mb-5">
+                                    <div class="col-7 align-self-center">
+                                        <ul class="nav nav-pills  bg-nav-pills nav-justified mb-3">
+                                            <li class="nav-item">
+                                                <a href="#profile1" data-toggle="tab" aria-expanded="true" style="border-radius: 110px;"
+                                                    class="nav-link active">
+                                                    <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>
+                                                    <span class="d-none d-lg-block">Details</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#settings1" data-toggle="tab" aria-expanded="false" style="border-radius: 110px;"
+                                                    class="nav-link">
+                                                    <i class="mdi mdi-settings-outline d-lg-none d-block mr-1"></i>
+                                                    <span class="d-none d-lg-block">Transactions</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-5 align-self-center">
+                                        <div class="customize-input float-right">
+                                            <img src="assets/images/img1.jpg" alt="" style="height: 80px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="profile1">
+                                                <div class="">
+                                                    <h4 class="card-title py-3">Personal Details </h4>
+                                                </div>
+                                                <form id="prsn_frm">
+                                                    <fieldset>
+                                                        <input type="hidden" name="_token"
+                                                            value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                        <table class="table " id="dataTable">
+                                                            <tbody>
+                                                                <a href="#">
+                                                                    <input type="hidden" name="id" value="796">
+                                                                    <tr>
+                                                                        <td>First Name</td>
+                                                                        <td><input type="text" value="Abass Kwesi" id="firstname"
+                                                                                name="firstname" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Last Name</td>
+                                                                        <td><input type="text" value="Idriss" id="lastname"
+                                                                                name="lastname" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth</td>
+                                                                        <td><input type="date" value="1985-09-29" id="DOB"
+                                                                                name="DOB" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>E-mail Address</td>
+                                                                        <td><input type="email" value="abass.idriss@gmail.com"
+                                                                                id="email" name="email" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mobile</td>
+                                                                        <td><input type="tel" value="0244861535" id="phone"
+                                                                                name="phone" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Occupation</td>
+                                                                        <td><input type="text" value="Idriss" id="lastname"
+                                                                                name="lastname" class="form-control"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gender</td>
+                                                                        <td><input type="text" value="Male" id="gender"
+                                                                                name="gender" class="form-control" disabled></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Member since</td>
+                                                                        <td><input type="text" value="Sept 20, 2020" id="gender"
+                                                                            name="gender" class="form-control" disabled></td>
+                                                                    </tr>
+                                                                </a>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="form-group d-flex justify-content-end">
+                                                            <button class="btn btn-primary btn-rounded" id="pers_btn"><i class="icon-pencil"></i> Update</button>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <div class="p-3">
+                                                    <div class="">
+                                                        <h4 class="card-title py-3">Plan Details</h4>
+                                                    </div>
+            
+                                                    <form action="#" method="post" id="policyplan_frm">
+                                                        <fieldset>
+                                                            <input type="hidden" name="_token"
+                                                                value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                            <table class="table " id="dataTable">
+                                                                <input type="hidden" name="_token"
+                                                                    value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                                <tbody>
+                                                                    <a href="#">
+                                                                        <input type="hidden" name="id" value="796">
+            
+                                                                        <tr>
+                                                                            <td>Selected Plan</td>
+                                                                            <input type="hidden" value="10" id="plan" name="plan">
+                                                                            </td>
+                                                                            <td><input type="text" value="Option Three"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Policy Number</td>
+                                                                            <td>
+                                                                                <input type="text" value="OSA026032100796"
+                                                                                    id="policy_number" name="policy_number"
+                                                                                    class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Frequency</td>
+                                                                            <td>
+                                                                                <select name="frequency" id="frequency"
+                                                                                    class="form-control">
+                                                                                    <option value=""></option>
+                                                                                    <option value='Full Year'>Full Year</option>
+                                                                                    <option value='Half Year'>Half Year</option>
+                                                                                    <option value='Monthly' selected>Monthly
+                                                                                    </option>
+                                                                                    <option value='Quarterly'>Quarterly</option>
+                                                                                </select>
+            
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Premium (GHS)</td>
+                                                                            <td>
+                                                                                14
+                                                                            </td>
+                                                                        </tr>
+                                                                    </a>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="form-group d-flex justify-content-end">
+                                                                <button class="btn btn-primary btn-rounded" id="pers_btn"><i class="icon-pencil"></i> Update</button>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+            
+                                                </div>
+                                                <div class="p-3">
+                                                    <div class="">
+                                                        <h4 class="card-title py-3">Secondary Lives</h4>
+                                                    </div>
+            
+                                                    <form id="dependantlives_frm">
+                                                        <fieldset>
+            
+                                                            <table class="table " id="dataTable">
+                                                                <input type="hidden" name="_token"
+                                                                    value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <h5 class="text-danger"><strong>* Dependant One</strong>
+                                                                            </h5>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Name</td>
+                                                                        <td class="d-flex justify-content-start">
+                                                                            <input type="text" value="Joana" id="dependentFirstName"
+                                                                                name="dependentFirstName" class="form-control mr-1">
+                                                                            <input type="text" value="Aboagye-Attah"
+                                                                                id="dependentLastName" name="dependentLastName"
+                                                                                class="form-control">
+            
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth</td>
+                                                                        <td>
+                                                                            <input type="date" value="1987-07-27" id="dateofBirth"
+                                                                                name="dateofBirth" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>E-mail Address</td>
+                                                                        <td>
+                                                                            <input type="email" value="joanaaboagyeattah@yahoo.com"
+                                                                                id="dependantemail" name="dependantemail"
+                                                                                class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mobile</td>
+                                                                        <td>
+                                                                            <input type="tel" value="0546335803" id="dependantphone"
+                                                                                name="dependantphone" class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gender</td>
+                                                                        <td>
+                                                                            <input type="text" value="Female" id="dependantgender"
+                                                                                name="dependantgender" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Relationship</td>
+                                                                        <td>
+                                                                            <input type="text" value="Spouse" id="relation"
+                                                                                name="relation" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+            
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <h5 class="text-danger"><strong>* Dependant Two</strong>
+                                                                            </h5>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Name</td>
+                                                                        <td class="d-flex justify-content-start">
+                                                                            <input type="text" value="" id="dependentTwoFirstName"
+                                                                                name="dependentTwoFirstName" class="form-control mr-1">
+                                                                            <input type="text" value="" id="dependentTwoLastName"
+                                                                                name="dependentTwoLastName" class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth</td>
+                                                                        <td>
+                                                                            <input type="date" value="" id="dependantTwoDOB"
+                                                                                name="dependantTwoDOB" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>E-mail Address</td>
+                                                                        <td>
+                                                                            <input type="email" value="" id="dependantTwoemail"
+                                                                                name="dependantTwoemail" class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mobile</td>
+                                                                        <td>
+                                                                            <input type="tel" value="0208244349"
+                                                                                id="dependantTwophone" name="dependantTwophone"
+                                                                                class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gender</td>
+                                                                        <td>
+                                                                            <input type="text" value="" id="dependantTwogender"
+                                                                                name="dependantTwogender" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Relationship</td>
+                                                                        <td>
+                                                                            <input type="text" value="" id="relationTwo"
+                                                                                name="relationTwo" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+            
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <h5 class="text-danger"><strong>* Dependant
+                                                                                    Three</strong></h5>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Name</td>
+                                                                        <td class="d-flex justify-content-start">
+                                                                            <input type="hidden" name="id" value="OSA026032100796">
+                                                                            <input type="text" value="" id="dependentThreeFirstName"
+                                                                                name="dependentThreeFirstName" class="form-control mr-1">
+                                                                            <input type="text" value="" id="dependentThreeLastName"
+                                                                                name="dependentThreeLastName" class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth</td>
+                                                                        <td>
+                                                                            <input type="date" value="" id="dependantThreeDOB"
+                                                                                name="dependantThreeDOB" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>E-mail Address</td>
+                                                                        <td>
+                                                                            <input type="email" value="" id="dependantThreeEmail"
+                                                                                name="dependantThreeEmail" class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mobile</td>
+                                                                        <td>
+                                                                            <input type="tel" value="0244680823"
+                                                                                id="dependantThreephone" name="dependantThreephone"
+                                                                                class="form-control">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gender</td>
+                                                                        <td>
+                                                                            <input type="text" value="" id="dependantThreegender"
+                                                                                name="dependantThreegender" class="form-control" disabled>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Relationship</td>
+                                                                        <td>
+                                                                            <input type="text" value="" id="relationThree"
+                                                                                name="relationThree" class="form-control disabled">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="form-group d-flex justify-content-end">
+                                                                <button class="btn btn-primary btn-rounded" id="pers_btn"><i class="icon-pencil"></i> Update</button>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+            
+                                                <div class="">
+                                                    <div class="">
+                                                        <h4 class="card-title py-3">Beneficiaries</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <form id="beneficiary_frm">
+                                                            <fieldset>
+                                                                <table class="table " id="dataTable">
+                                                                    <input type="hidden" name="_token"
+                                                                        value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <h5 class="text-danger"><strong>* Benefeciary
+                                                                                        One</strong></h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Name</td>
+                                                                            <input type="hidden" name="id" value="OSA026032100796">
+                                                                            <td class="d-flex justify-content-start"><input
+                                                                                    type="text" value="Joana"
+                                                                                    id="beneficiaryFirstName"
+                                                                                    name="beneficiaryFirstName"
+                                                                                    class="form-control mr-1" disabled>
+                                                                                <input type="text" value="Aboagye-Attah"
+                                                                                    id="beneficiaryLastName"
+                                                                                    name="beneficiaryLastName" class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+            
+                                                                        <tr>
+                                                                            <td>E-mail Address</td>
+                                                                            <td><input type="email"
+                                                                                    value="joanaaboagyeattah@yahoo.com"
+                                                                                    id="beneficiaryEmail" name="beneficiaryEmail"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Mobile</td>
+                                                                            <td><input type="tel" value="0546335803"
+                                                                                    id="beneficiaryphone" name="beneficiaryphone"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Gender</td>
+                                                                            <td><input type="text" value="Female"
+                                                                                    id="beneficiarygender" name="beneficiarygender"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Relationship</td>
+                                                                            <td><input type="text" value="Spouse"
+                                                                                    id="beneficiaryRelation"
+                                                                                    name="beneficiaryRelation" class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Date of Birth</td>
+                                                                            <td>
+                                                                                <input type="date" value="1987-07-27"
+                                                                                    id="beneficiaryDOB" name="beneficiaryDOB"
+                                                                                    class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Percentage Allocation</td>
+                                                                            <td>
+                                                                                <input type="tel" value="1987-07-27"
+                                                                                    id="beneficiaryDOB" name="beneficiaryDOB"
+                                                                                    class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <h5 class="text-danger"><strong>* Benefeciary
+                                                                                        Two</strong></h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Name</td>
+                                                                            <input type="hidden" name="id" value="OSA026032100796">
+                                                                            <td class="d-flex justify-content-start"><input
+                                                                                    type="text" value="Joana"
+                                                                                    id="beneficiaryFirstName"
+                                                                                    name="beneficiaryFirstName"
+                                                                                    class="form-control mr-1" disabled>
+                                                                                <input type="text" value="Aboagye-Attah"
+                                                                                    id="beneficiaryLastName"
+                                                                                    name="beneficiaryLastName" class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+            
+                                                                        <tr>
+                                                                            <td>E-mail Address</td>
+                                                                            <td><input type="email"
+                                                                                    value="joanaaboagyeattah@yahoo.com"
+                                                                                    id="beneficiaryEmail" name="beneficiaryEmail"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Mobile</td>
+                                                                            <td><input type="tel" value="0546335803"
+                                                                                    id="beneficiaryphone" name="beneficiaryphone"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Gender</td>
+                                                                            <td><input type="text" value="Female"
+                                                                                    id="beneficiarygender" name="beneficiarygender"
+                                                                                    class="form-control" disabled></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Relationship</td>
+                                                                            <td><input type="text" value="Spouse"
+                                                                                    id="beneficiaryRelation"
+                                                                                    name="beneficiaryRelation" class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Date of Birth</td>
+                                                                            <td>
+                                                                                <input type="date" value="1987-07-27"
+                                                                                    id="beneficiaryDOB" name="beneficiaryDOB"
+                                                                                    class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Percentage Allocation</td>
+                                                                            <td>
+                                                                                <input type="tel" 
+                                                                                    id="beneficiaryDOB" name="beneficiaryDOB"
+                                                                                    class="form-control" disabled>
+                                                                            </td>
+                                                                        </tr>
+            
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="form-group d-flex justify-content-end">
+                                                                    <button class="btn btn-primary" id="pers_btn"><i class="icon-pencil"></i> Update</button>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="settings1">
+                                                <div class="table-responsive">
+                                                    <table id="default_order" class="table table-striped table-bordered table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="padding-left: 3px; padding-right: 3px;">SN</th>
+                                                                <th>Time</th>
+                                                                <th>Type</th>
+                                                                <th>Transaction ID</th>
+                                                                <th>Amount</th>
+                                                                <th>Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr style="font-size: 13px;">
+                                                                <td>1</td>
+                                                                <td>May 11, 2022 22:45:23</td>
+                                                                <td>Premium</td>
+                                                                <td>PRE0000000546</td>
+                                                                <td>14.00</td>
+                                                                <td>
+                                                                    <i class="fas fa-check-circle text-success"></i> Success
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>    
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="profile-b2">
+                                                
+                                            </div>
+                                            <div class="tab-pane" id="settings-b2">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                        <form id="prsn_frm">
+                                            <fieldset>
+                                                <input type="hidden" name="_token"
+                                                    value="rpmldwl2ExHUhNG3hiOaW3ZSgSWq28JKJKYGR5Nx">
+                                                <table class="table " id="dataTable">
+                                                    <tbody>
+                                                        <a href="#">
+                                                            <input type="hidden" name="id" value="796">
+                                                            <tr>
+                                                                <td>First Name</td>
+                                                                <td><input type="text" value="Abass Kwesi" id="firstname"
+                                                                        name="firstname" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Last Name</td>
+                                                                <td><input type="text" value="Idriss" id="lastname"
+                                                                        name="lastname" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Date of Birth</td>
+                                                                <td><input type="date" value="1985-09-29" id="DOB"
+                                                                        name="DOB" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>E-mail Address</td>
+                                                                <td><input type="email" value="abass.idriss@gmail.com"
+                                                                        id="email" name="email" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mobile</td>
+                                                                <td><input type="tel" value="0244861535" id="phone"
+                                                                        name="phone" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Occupation</td>
+                                                                <td><input type="text" value="Idriss" id="lastname"
+                                                                        name="lastname" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gender</td>
+                                                                <td><input type="text" value="Male" id="gender"
+                                                                        name="gender" class="form-control"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Member since</td>
+                                                                <td>14th December 2021</td>
+                                                            </tr>
+                                                        </a>
+                                                    </tbody>
+                                                </table>
+                                                <div class="form-group d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-info"><i class="fas fa-paper-plane"></i> Save</button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+
+
+                                        <form action="#">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-"></i> Token</label>
+                                                            <input type="text" class="form-control" placeholder="GRP45E2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-hospital"></i> Name of Company</label>
+                                                            <input type="text" class="form-control" placeholder="Company Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-map-marker-alt"></i> Location/GPS Address</label>
+                                                            <input type="text" class="form-control" placeholder="27 Tanganga St.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-envelope"></i> E-mail ID</label>
+                                                            <input type="email" class="form-control" placeholder="me@gmail.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-phone"></i> Contact</label>
+                                                            <input type="number" class="form-control" placeholder="0202235212">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group mb-4">
+                                                            <label for="exampleFormControlSelect1"><i class="fas fa-tasks"></i> Plans</label>
+                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                                <option value="one">Option 1</option>
+                                                                <option value="two">Option 2</option>
+                                                                <option value="two">Option 3</option>
+                                                                <option selected>Custom Plan</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-user-secret"></i> Agent's Name</label>
+                                                            <input type="text" class="form-control" placeholder="Jack Mantey">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-money-bill-alt"></i> Agent's Commission</label>
+                                                            <input type="text" class="form-control" placeholder="10%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <hr class="bg-dark">
+                                                <h4 class="card-title py-3">Contact Person 1 <i class="fas fa-plus-circle" id="benefit"></i></h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-user"></i> Name</label>
+                                                            <input type="text" class="form-control" placeholder="Bill Kwesi Adongo">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fab fa-tumblr"></i> Position/Job</label>
+                                                            <input type="text" class="form-control" placeholder="Managing Director">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-envelope"></i> E-mail ID</label>
+                                                            <input type="email" class="form-control" placeholder="me@gmail.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-phone"></i> Phone</label>
+                                                            <input type="number" class="form-control" placeholder="0207742778">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr class="bg-dark">
+                                                <h4 class="card-title">Contact Person 2 <i class="fas fa-plus-circle" id="benefit"></i></h4>
+                                                <div class="row py-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-user"></i> Name</label>
+                                                            <input type="text" class="form-control" placeholder="Tsatsu Adade">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fab fa-tumblr"></i> Position/Job</label>
+                                                            <input type="text" class="form-control" placeholder="Cleaner">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-envelope"></i> E-mail ID</label>
+                                                            <input type="email" class="form-control" placeholder="me@gamail.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label><i class="fas fa-phone"></i> Phone</label>
+                                                            <input type="number" class="form-control" placeholder="0245622189">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-info"><i class="fas fa-paper-plane"></i> Submit</button>
+                                                    <button type="reset" class="btn btn-dark"><i class="fas fa-undo"></i> Reset</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="row h-100" style="overflow-y: scroll;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
+                                    <!-- <li class="nav-item">
+                                        <a href="#call1" data-toggle="tab" aria-expanded="false"
+                                            class="nav-link  active" style="border-radius: 110px;">
+                                            <i class="mdi mdi-home-variant d-lg-none d-block mr-1"></i>
+                                            <span class="d-none d-lg-block"><i class="icon-phone"></i> Call Summary</span>
+                                        </a>
+                                    </li> -->
+                                    <li class="nav-item">
+                                        <a href="#sms1" data-toggle="tab" aria-expanded="true"
+                                            class="nav-link" style="border-radius: 110px;">
+                                            <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>
+                                            <span class="d-none d-lg-block"><i class="icon-bubble"></i> SMS</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#email1" data-toggle="tab" aria-expanded="false"
+                                            class="nav-link" style="border-radius: 110px;">
+                                            <i class="mdi mdi-settings-outline d-lg-none d-block mr-1"></i>
+                                            <span class="d-none d-lg-block"><i class="icon-envelope"></i> Email</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="card shadow">
+                                    <div class="card-body">
+                                        <div class="tab-content" style="border-top: 20px #168491;">
+                                            <div class="tab-pane process_claim active" id="call1">
+                                                <form action="">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Date</label>
+                                                                <input type="date" value="" id="relationThree"
+                                                                                        name="relationThree" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Time</label>
+                                                                <input type="time" value="" id="relationThree"
+                                                                                        name="relationThree" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Type Your Summary</label>
+                                                                <textarea name="message" id="message" cols="30" rows="5"
+                                                                    maxlength="280">Type Message here...
+                                                                </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <button type="submit" id="comment_btn"
+                                                        class="btn btn-primary btn-rounded mx-auto"><i class="fas fa-paper-plane"></i> Send</button>
+                                                    </div>
+                                                </form>
+                                                <div class="sms">
+                                                        <table id="">
+                                                            <thead class=" text-primary">
+                                                              <tr>
+                                                                <th>Previous Calls Summary</th>
+                                                              </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                          <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                          <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Critical illness report to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=2" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="2" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Other to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=3" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="3" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Training in session
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=4" method="get">
+                                                                              <input type="hidden" value="Claims Enquiry" name="title" id="title">                       
+                                                                              <input type="hidden" value="4" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear EMMANUEL ANDREWS, kindly send a copy of the Medical Cause of death to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="5" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary align-items-center">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-pane show" id="sms1">
+                                                
+                                                <form action="">
+                                                    <div class="form-group">
+                                                        <label><i class=""></i> Type your Message</label>
+                                                        <textarea name="message" id="message" cols="30" rows="5"
+                                                            maxlength="280" class="form-control">Type Message here...
+                                                        </textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" id="comment_btn"
+                                                        class="btn btn-primary btn-rounded mx-auto"><i class="fas fa-paper-plane"></i> Send</button>
+                                                    </div>
+                                                </form>
+                                                <div class="sms">
+                                                        <table id="">
+                                                            <thead class=" text-primary">
+                                                              <tr>
+                                                                <th>Previous Messages</th>
+                                                              </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                          <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                          <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Critical illness report to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=2" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="2" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Other to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=3" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="3" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Training in session
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=4" method="get">
+                                                                              <input type="hidden" value="Claims Enquiry" name="title" id="title">                       
+                                                                              <input type="hidden" value="4" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear EMMANUEL ANDREWS, kindly send a copy of the Medical Cause of death to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="5" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary align-items-center">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                </div>
+                                                
+
+                                            </div>
+                                            <div class="tab-pane" id="email1">
+                                                <form action="">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> To:</label>
+                                                                <input type="text" value="latu@gmail.com" id="relationThree"
+                                                                name="relationThree" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Cc:</label>
+                                                                <input type="text" value="" id="relationThree"
+                                                                                        name="relationThree" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Subject:</label>
+                                                                <input type="text" value="" id="relationThree"
+                                                                                        name="relationThree" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label><i class=""></i> Type Your Summary</label>
+                                                                <textarea name="message" id="summernote" cols="30" rows="5"
+                                                                    maxlength="280" class="">Type Message here...
+                                                                </textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <button type="submit" id="comment_btn"
+                                                        class="btn btn-primary btn-rounded mx-auto"><i class="fas fa-paper-plane"></i> Send</button>
+                                                    </div>
+                                                </form>
+                                                <div class="sms">
+                                                        <table id="">
+                                                            <thead class=" text-primary">
+                                                              <tr>
+                                                                <th>Previous Emails</th>
+                                                              </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                              <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                          <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                          <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Critical illness report to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=2" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="2" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear Solo Test, kindly send a copy of the Other to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=3" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="3" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Training in session
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="http://osa.vanguardlife.com/office/SMS?id=4" method="get">
+                                                                              <input type="hidden" value="Claims Enquiry" name="title" id="title">                       
+                                                                              <input type="hidden" value="4" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                                            <tr>
+                                                                  <td>
+                                                                    <div class="wrap" style="margin: 1em;">
+                                                                      <div class="alert alert-info">
+                                                                        <div class="action d-flex justify-content-between">
+                                                                            <h5 class=""><strong>By:</strong> Hanson Bansah</h5>
+                                                                            <h5 class="mx-2"><strong>Sent on: </strong>12.11.21 <span class="ml-2"> 10:30AM</span> </h5>
+                                                                        </div>
+                                                                        <div class="row d-flex">
+                                                                          <div class="col col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                                                                              Dear EMMANUEL ANDREWS, kindly send a copy of the Medical Cause of death to aid in your claim processing. Send documents to osa@valifeapps.com
+                                                                          </div>
+                                                                          <div class="col col-md-3 col-lg-3 col-sm-12 col-xs-12 d-flex justify-content-center">
+                                                                            <form action="" method="get">
+                                                                              <input type="hidden" value="Document Request" name="title" id="title">                       
+                                                                              <input type="hidden" value="5" name="id" id="id">                       
+                                                                              <button type="submit" class="btn btn-sm btn-primary align-items-center">
+                                                                                <i class="fas fa-history"></i>
+                                                                              </button>
+                                                                            </form>
+                                                                          </div>
+                                                                        </div>
+
+                                                                      </div>
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                </div>       
+                                            </div>
+                                        </div>
+                
+                                          <!-- end card-->
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                
+            </div>
+            
+            <footer class="footer text-center text-muted">
+                <a></a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <!-- themejs -->
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+
+    <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
+</body>
+
+</html>

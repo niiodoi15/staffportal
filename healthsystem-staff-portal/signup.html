@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/logo.png"
+    />
+    <title>Grupi</title>
+    <!-- This page plugin CSS -->
+    <link
+      href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- ============================================================== -->
+      <!-- Preloader - style you can find in spinners.css -->
+      <!-- ============================================================== -->
+      <div class="preloader">
+        <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Preloader - style you can find in spinners.css -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Login box.scss -->
+      <!-- ============================================================== -->
+      <div
+        class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+      >
+        <div class="auth-box shadow row">
+          <div class="bg-white">
+            <div class="p-3">
+              <div class="text-center">
+                <div
+                  class="icon-lock text-primary"
+                  style="font-size: 50px"
+                ></div>
+                <!-- <img src="assets/images/big/icon.png" alt="wrapkit"> -->
+              </div>
+              <h2 class="mt-3 text-center">Sign Up</h2>
+              <p class="text-center"></p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <form id="signUpForm" action="">
+                        <div class="form-body">
+                          <!-- step one -->
+                          <div class="step">
+                            <h4 class="card-title py-3">
+                              Personal Details
+                              <i class="fas fa-file" id="benefit"></i>
+                            </h4>
+                            <hr class="bg-dark" />
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-briefcase"></i>
+                                    Picture</label
+                                  >
+                                  <input type="file" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i> First
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="First Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i> Last
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-phone"></i> Phone Number
+                                  </label>
+                                  <input
+                                    type="tel"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-history"></i> Staff ID
+                                  </label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="Staff ID"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                  <label for="exampleFormControlSelect1"
+                                    ><i class="fas fa-tasks"></i> Staff
+                                    Category</label
+                                  >
+                                  <select
+                                    class="form-control"
+                                    id="exampleFormControlSelect1"
+                                  >
+                                    <option value="two">Junior Staff</option>
+                                    <option value="two">Senior Staff</option>
+                                    <option value="two">Executive</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-history"></i> Branch
+                                    Office/Location
+                                  </label>
+                                  <input
+                                    type="string"
+                                    class="form-control"
+                                    placeholder="Branch Office/Location"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- step two -->
+                          <div class="step">
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12">
+                                <h4 class="card-title py-3">Dependants</h4>
+                                <hr class="bg-dark" />
+                              </div>
+                              <!-- dep 1 -->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center mb-1 text-danger"
+                                >
+                                  <span>Dependant One</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i>
+                                    Image</label
+                                  >
+                                  <input type="file" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i> First
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-calendar-alt"></i> Last
+                                    Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <!-- dep 2 -->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center my-2 text-danger"
+                                >
+                                  <span>Dependant Two</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i>
+                                    Image</label
+                                  >
+                                  <input type="file" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i> First
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-calendar-alt"></i> Last
+                                    Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <!-- dep 3 -->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center my-2 text-danger"
+                                >
+                                  <span>Dependant Three</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-calendar-alt"></i> Date of
+                                    Birth</label
+                                  >
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- step three -->
+                          <div class="step">
+                            <div class="row">
+                              <div class="col-md-12 col-sm-12">
+                                <h4 class="card-title py-3">Dependants</h4>
+                                <hr class="bg-dark" />
+                              </div>
+                              <!-- dep 4 -->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center mb-1 text-danger"
+                                >
+                                  <span>Dependant Four</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i>
+                                    Image</label
+                                  >
+                                  <input type="file" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i> First
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-calendar-alt"></i> Last
+                                    Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <!-- dep 5 -->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center my-2 text-danger"
+                                >
+                                  <span>Dependant Five</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i>
+                                    Image</label
+                                  >
+                                  <input type="file" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-address-book"></i> First
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>
+                                    <i class="fas fa-calendar-alt"></i> Last
+                                    Name
+                                  </label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <!-- dep 6-->
+                              <div class="col-md-12 col-sm-12">
+                                <h5
+                                  class="sidebar-heading d-flex justify-content-between align-items-center my-2 text-danger"
+                                >
+                                  <span>Dependant Six</span>
+                                </h5>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-calendar-alt"></i> Date of
+                                    Birth</label
+                                  >
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-envelope"></i> E-mail
+                                    Address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-phone"></i> Phone
+                                    Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="me@gmail.com"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-user-circle"></i>
+                                    Gender</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label
+                                    ><i class="fas fa-address-book"></i>
+                                    Relationship</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Company Name"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- start previous / next buttons -->
+                          <div
+                            class="form-footer d-flex justify-content-between"
+                          >
+                            <div class="mt-1">
+                              <button
+                                type="button"
+                                id="prevBtn"
+                                class="text-start btn-primary text-white"
+                                onclick="nextPrev(-1)"
+                              >
+                                <span><i class="fa fa-arrow-left"></i></span>
+                                Previous
+                              </button>
+                            </div>
+                            <div class="">
+                              <!-- <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">
+                                                                            
+                                                                          </button> -->
+                              <button
+                                type="button"
+                                class="text-end text-white"
+                                id="nextBtn"
+                                onclick="nextPrev(1)"
+                              >
+                                <span><i class="fa fa-arrow-right"></i></span>
+                                Next
+                              </button>
+                            </div>
+                          </div>
+                          <!-- end previous / next buttons -->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Login box.scss -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- All Required js -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js "></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js "></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js "></script>
+
+    <script src="assets/js/custom.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugin js -->
+    <!-- ============================================================== -->
+    <script>
+      $(".preloader ").fadeOut();
+    </script>
+  </body>
+</html>
